@@ -1,22 +1,49 @@
 {
-    "users":[
-        {
-            "id":1,
-            "first_name": "Darot",
-            "last_name":"Abdulrasaq",
-            "user_name":"darotudeen",
-            "email": "darot@email.com",
-            "password":"hash"
-        }
-        
-    ],
-    "cars":[
-        {
-            "id": 1,
-            "maker": "Toyota",
-            "model":"Camry210",
-            "year": 2001,
-            "price": 1200000
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Darot",
+      "last_name": "Abdulrasaq",
+      "user_name": "darotudeen",
+      "email": "darot@email.com",
+      "password": "hash"
+    }
+  ],
+  "cars": [
+    {
+      "id": 1,
+      "maker": "Toyota",
+      "model": "Camry210",
+      "year": 2001,
+      "price": 1200000
+    },
+    {
+      "maker": "Toyota",
+      "model": "Corolla",
+      "year": "2010",
+      "price": "30000000",
+      "id": 2
+    },
+    {
+      "maker": "Toyota",
+      "model": "Corolla",
+      "year": "2010",
+      "price": "30000000",
+      "id": 3
+    },
+    {
+      "maker": "Mercedes",
+      "model": "Matrix",
+      "year": "2008",
+      "price": "233333333",
+      "id": 4
+    },
+    {
+      "maker": "Honda",
+      "model": "Accord",
+      "year": "2003",
+      "price": "123999999",
+      "id": 5
+    }
+  ]
 }
