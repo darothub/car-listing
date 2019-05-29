@@ -46,14 +46,14 @@ form{
 }
 .btn-custom{
     display: block;
-    margin: 20px auto;
-    width: 100px;
+    height: 50px;
+    line-height: 2em;
     background-color: #00A085;
 }
 .form-content{
     min-height: calc(100vh - 80px - 40px );
     margin-bottom: 0px;
-    background-image: url('../images/car-logo.gif');
+    background-image: url('../images/car5.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
