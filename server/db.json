@@ -1,0 +1,22 @@
+{
+    "users":[
+        {
+            "id":1,
+            "first_name": "Darot",
+            "last_name":"Abdulrasaq",
+            "user_name":"darotudeen",
+            "email": "darot@email.com",
+            "password":"hash"
+        }
+        
+    ],
+    "cars":[
+        {
+            "id": 1,
+            "maker": "Toyota",
+            "model":"Camry210",
+            "year": 2001,
+            "price": 1200000
+        }
+    ]
+}
