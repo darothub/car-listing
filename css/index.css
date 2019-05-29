@@ -1,6 +1,39 @@
 .img1{
     margin-left: 200px;
 }
+.jumbotron{
+    background-color: #00A085;
+}
+.jumbotron h1{
+    color: #ffff;
+    font-family: cursive;
+    font-size: 60px;
+}
+.nav-link{
+    color: #fff;
+}
 .container{
     margin-left: -30px;
+    margin-top: 90px;
+}
+.form-group{
+    
+    min-width: 100%;
+}
+.form-group h1{
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.form-control{
+    height: 40px;
+    width: 300px;
+}
+
+form{
+    width: 350px;
+    background-color: red;
+    margin-right: 100px
+}
+.btn{
+    margin-top: 20px;
 }
