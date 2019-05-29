@@ -90,4 +90,9 @@ form{
 
 .card-custom{
     display: inline-block;
+    margin-top: 15px;
+}
+.card-container-custom{
+    width: 82%;
+    margin: 0 auto;
 }
