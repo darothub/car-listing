@@ -96,3 +96,9 @@ form{
     width: 82%;
     margin: 0 auto;
 }
+
+.result{
+    width: 150px;
+    height: 50px;
+    margin: 10px auto;
+}
