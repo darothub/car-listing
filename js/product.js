@@ -34,7 +34,8 @@ $(document).ready(function(e){
                     $('input[name=model]').val(data.model);
                     $('input[name=year]').val(data.year);
                     $('input[name=price]').val(data.price);
-                    // $('#btn').html('Update Car')
+                    $('#btn').hide();
+                    $('#btn1').toggle();
                     $('input[name=image]').val()
                 })
             })
@@ -48,7 +49,7 @@ $(document).ready(function(e){
                     'price' : $('input[name=price]').val(),
                     'image' : $('input[name=image]').val(),
                 };
-                console.log(formData['id'])
+                
                 $.ajax({
                     type    : 'PATCH',
                     url     : `http://localhost:3000/cars/${formData['id']}`,
