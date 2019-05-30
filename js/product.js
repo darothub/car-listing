@@ -15,7 +15,7 @@ $(document).ready(function(e){
                     `<p class="card-text model">${item.model}</p>` +
                     `<p class="card-text year" id=${item.year}>${item.year}</p>` +
                     `<p class="card-text price">N${item.price}</p>` +
-                    `<a href="#" class="btn btn-primary btn-custom">Details</a>`+ " " +
+                    `<a href="#" class="btn btn-primary btn-custom details" id=${item.id}>Details</a>`+ " " +
                     `<a href="#" class="btn btn-primary btn-custom edit" id=${item.id}>Edit</a>` + " " +
                     `<a href="#" class="btn btn-primary btn-custom delete" id=${item.id}>Delete</a>` + " " +
                     '</div>'
@@ -59,6 +59,7 @@ $(document).ready(function(e){
                 })
                 .done(function(data){
                     alert('sucess')
+                    
         
                 });
                 event.preventDefault();
@@ -79,6 +80,44 @@ $(document).ready(function(e){
                 .done(function(data){
                     alert('sucess')
         
+                }).fail(function(data){
+                    alert('error! can not perform action')
+                })
+                event.preventDefault();
+            })
+            $('.details').on('click', function(event){
+                $('.form-content').hide()
+                $("#res").hide()
+                var {id} = event.target
+                // console.log(id)
+                var productById ;
+                
+                $.ajax({
+                    type    : 'GET',
+                    url     : `http://localhost:3000/cars/${id}`,
+                    dataType : 'json',
+                    encode   : true
+                })
+                .done(function(data){
+                    
+                    // $('display.html').load('.display')
+                    // console.log(data)
+                    productById = '<div class="card card-custom" id="card" style="width: 18rem;">' + 
+                    `<img src=${data.image} class="card-img-top" alt="...">`  + 
+                    `<div class="card-body">`+
+                    `<h5 class="card-title" style="display:none;" id=${data.id}>${data.id}</h5>` +
+                    `<h5 class="card-title" id=${data.maker}>${data.maker}</h5>`+
+                    `<p class="card-text model">${data.model}</p>` +
+                    `<p class="card-text year" id=${data.year}>${data.year}</p>` +
+                    `<p class="card-text price">N${data.price}</p>` +
+                    `<a href="#" class="btn btn-primary btn-custom details" style ="display:none" id=${data.id}>Details</a>`+ " " +
+                    `<a href="#" class="btn btn-primary btn-custom edit" style ="display:none" id=${data.id}>Edit</a>` + " " +
+                    `<a href="#" class="btn btn-primary btn-custom delete"style ="display:none" id=${data.id}>Delete</a>` + " " +
+                    '</div>'
+                    $("#display").append(productById);
+                    
+                    
+                    // window.location.assign('../display.html')
                 }).fail(function(data){
                     alert('error! can not perform action')
                 })
