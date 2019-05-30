@@ -17,7 +17,7 @@ $(document).ready(function(e){
                     `<p class="card-text price">N${item.price}</p>` +
                     `<a href="#" class="btn btn-primary btn-custom">Details</a>`+ " " +
                     `<a href="#" class="btn btn-primary btn-custom edit" id=${item.id}>Edit</a>` + " " +
-                    `<a href="#" class="btn btn-primary btn-custom delete">Delete</a>` + " " +
+                    `<a href="#" class="btn btn-primary btn-custom delete" id=${item.id}>Delete</a>` + " " +
                     '</div>'
                     
                 })
@@ -61,6 +61,27 @@ $(document).ready(function(e){
                     alert('sucess')
         
                 });
+                event.preventDefault();
+            })
+            $('.delete').on('click', function(event){
+                var {id} = event.target
+                var formData = {
+                    'id'    :$('input[name=id]').val()
+                };
+                
+                $.ajax({
+                    type    : 'DELETE',
+                    url     : `http://localhost:3000/cars/${id}`,
+                    data    : formData,
+                    dataType : 'json',
+                    encode   : true
+                })
+                .done(function(data){
+                    alert('sucess')
+        
+                }).fail(function(data){
+                    alert('error! can not perform action')
+                })
                 event.preventDefault();
             })
         })
