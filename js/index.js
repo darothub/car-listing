@@ -22,3 +22,37 @@ $(document).ready(function(){
         event.preventDefault();
     })
 })
+
+$(document).ready(function(e){
+   console.log('ready')
+    $.getJSON('http://localhost:3000/cars', function(data){
+     
+        var optionMaker ;
+        var optionModel;
+        var arr=[]
+            
+        $.each(data, function(index, item){
+            console.log(item.maker)
+            
+            
+            $.each(item, function(key, value){
+                if(item.maker === $('.option')){
+                    return false
+                }
+
+                optionMaker = `<option value="${item.maker}">${item.maker}</option>`
+                optionModel = `<option value="${item.model}">${item.model}</option>`
+                
+            })
+            $(".maker").append(optionMaker);
+            $(".model").append(optionModel);
+        })            
+        
+   
+    })
+           
+   })
+   
+   
+   
+   

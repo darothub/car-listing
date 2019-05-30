@@ -33,7 +33,12 @@
             </div>
             <div class="container jumbotron form-content ">
                 <div class="form-group form-custom input-container">
-                  <form action="http://localhost:3000/cars"  method="POST">
+                  <form>
+                        <div class="form-group" style="display:none;">
+                            <label for="exampleInputEmail1">id</label>
+                            <input type="text" class="form-control"  name ='id' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Maker">
+                            
+                        </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Maker</label>
                             <input type="text" class="form-control"  name ='maker' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Maker">
@@ -51,7 +56,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Price</label>
-                            <input type="number" class="form-control" name ='price' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Price">
+                            <input type="text" class="form-control" name ='price' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Price">
                             
                         </div>
                         <div class="form-group">
@@ -59,7 +64,7 @@
                                 <input type="file" class="form-control" name ='image' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Price">
                                 
                             </div>
-                      
+                            <button type="submit" class="btn btn-primary btn-custom " id='btn1'> Update Car </button>
                             <button type="submit" class="btn btn-primary btn-custom " id='btn'> Create Car </button> 
                   </form>
                  
@@ -67,42 +72,56 @@
             </div>
             <section class="jumbotron container car-list">
                 <div class="card-container-custom" id="res">
-                        <div class="card card-custom" style="width: 18rem;">
+                        <!-- <div class="card card-custom" style="width: 18rem;">
                                 <img src="images/car1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">BMW X5</h5>
+                                <div class="card-body" id="card-body">
+                                    <h5 class="card-title id" id="num">1 </h5>
+                                    <h5 class="card-title maker">BMW </h5>
+                                    <p class="card-text  model">X5</p>
                                     <p class="card-text year">2001</p>
-                                    <p class="card-text price">2,000,000.00</p>
+                                    <p class="card-text price">N2,000,000.00</p>
                                     <a href="#" class="btn btn-primary btn-custom">Details</a>
+                                    <a href="#" class="btn btn-primary btn-custom edit" >Edit</a>
+                                    <a href="#" class="btn btn-primary btn-custom delete">Delete</a>
                                 </div>
                             </div>
                             <div class="card card-custom" style="width: 18rem;">
                                 <img src="images/car2.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Toyota Matrix x24</h5>
+                                <div class="card-body" id="card-body">
+                                    <h5 class="card-title id" id="num">2 </h5>
+                                    <h5 class="card-title" id="2">Toyota </h5>
+                                    <p class="card-text model">Matrix x24</p>
                                     <p class="card-text year">2001</p>
-                                    <p class="card-text price">2,500,000.00</p>
+                                    <p class="card-text price">N2,500,000.00</p>
                                     <a href="#" class="btn btn-primary btn-custom">Details</a>
+                                    <a href="#" class="btn btn-primary btn-custom edit" id="edit">Edit</a>
+                                    <a href="#" class="btn btn-primary btn-custom">Delete</a>
                                 </div>
                             </div>
                             <div class="card card-custom" style="width: 18rem;">
                                 <img src="images/car3.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                <h5 class="card-title">Honda Accord EX-V</h5>
+                                <h5 class="card-title" id="3">Honda </h5>
+                                <p class="card-text model">Accord EX-V</p>
                                 <p class="card-text year">2004</p>
-                                <p class="card-text price">3,500,000.00</p>
+                                <p class="card-text price">N3,500,000.00</p>
                                 <a href="#" class="btn btn-primary btn-custom">Details</a>
+                                <a href="#" class="btn btn-primary btn-custom ">Edit</a>
+                                <a href="#" class="btn btn-primary btn-custom">Delete</a>
                                 </div>
                             </div>
                             <div class="card card-custom" style="width: 18rem;">
                                 <img src="images/car4.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                <h5 class="card-title">Infiniti QX80</h5>
+                                <h5 class="card-title" >Infiniti </h5>
+                                <p class="card-text year model">QX80</p>
                                 <p class="card-text year">2017</p>
-                                <p class="card-text">1,000,000.00</p>
+                                <p class="card-text">N1,000,000.00</p>
                                 <a href="#" class="btn btn-primary btn-custom">Details</a>
+                                <a href="#" class="btn btn-primary btn-custom ">Edit</a>
+                                <a href="#" class="btn btn-primary btn-custom">Delete</a>
                                 </div>
-                            </div>
+                            </div> -->
                 </div>
             </section>
             
