@@ -38,6 +38,7 @@ $(document).ready(function(e){
                     $('#btn1').toggle();
                     $('input[name=image]').val()
                 })
+                event.preventDefault();
             })
             $('#btn1').on('click', function(event){
                 
@@ -78,6 +79,7 @@ $(document).ready(function(e){
                     encode   : true
                 })
                 .done(function(data){
+                    // prompt('are you sure you want to delete?')
                     alert('sucess')
         
                 }).fail(function(data){
@@ -110,9 +112,9 @@ $(document).ready(function(e){
                     `<p class="card-text model">${data.model}</p>` +
                     `<p class="card-text year" id=${data.year}>${data.year}</p>` +
                     `<p class="card-text price">N${data.price}</p>` +
-                    `<a href="#" class="btn btn-primary btn-custom details" style ="display:none" id=${data.id}>Details</a>`+ " " +
-                    `<a href="#" class="btn btn-primary btn-custom edit" style ="display:none" id=${data.id}>Edit</a>` + " " +
-                    `<a href="#" class="btn btn-primary btn-custom delete"style ="display:none" id=${data.id}>Delete</a>` + " " +
+                    `<a href="#" class="btn btn-primary btn-custom details"  style ="display:none" id=${data.id}>Details</a>`+ " " +
+                    `<a href="#" class="btn btn-primary btn-custom edit"  style ="display:none" id=${data.id}>Edit</a>` + " " +
+                    `<a href="#" class="btn btn-primary btn-custom delete"  style ="display:none" id=${data.id}>Delete</a>` + " " +
                     '</div>'
                     $("#display").append(productById);
                     
@@ -146,6 +148,7 @@ $(document).ready(function(){
             encode   : true
         })
         .done(function(data){
+            
             alert('sucess')
 
         });

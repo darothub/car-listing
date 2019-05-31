@@ -20,13 +20,13 @@
               <div class="container nav header">
                 <ul class="nav nav-pills  nav-custom">
                   <li class="nav-item">
-                    <a class="nav-link " href="#">Home</a>
+                    <a class="nav-link native-anchor" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Contact us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link native-anchor"  href="register.html">Register</a>
                   </li>
     
                 </ul>
@@ -95,6 +95,13 @@
             
       <footer class="container footer-custom">Darot Cars &copy;</footer>
       <script src="js/product.js"></script>
+      <script type="text/javascript">
+        $('a.native-anchor').bind('click', function(ev) {
+            var target = $( $(this).attr('href') ).get(0).offsetTop;
+            $.mobile.silentScroll(target);
+            return false;
+        });
+    </script>
       
 </body>
 </html>

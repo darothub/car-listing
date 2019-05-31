@@ -18,13 +18,22 @@ $(document).ready(function(){
             encode   : true
         })
         .done(function(data){
-            $.each(data, function(index, item){
-                console.log(formData['email'])
-                if(formData['email'] === item['email'] && formData['password'] === item['password'] ){
-                    $('.form-content').before('<div class="alert alert-primary" role="alert"> You have sign in successfully </div>')
-                }
-                $('.form-content').before('<div class="alert alert-danger" role="alert">Invalid username/password</div>')
-            })
+            console.log(data)
+               var i = 0;
+               while(i < data.length){
+                    if(formData['email'] === data[i]['email'] && formData['password'] === data[i]['password'] ){
+                        $('.form-content').before('<div class="alert alert-primary" role="alert"> You have sign in successfully </div>')
+                        setTimeout(function(){ window.location.assign('products.html'); }, 3000); 
+                        
+                         return false
+                        
+                    }
+                   
+                    i++
+               }
+               $('.form-content').before('<div class="alert alert-danger" role="alert">Invalid username/password</div>')
+                
+           
             
              
         })
