@@ -12,6 +12,11 @@ $(document).ready(function(){
             'password' :  $('input[type=password]').val()
     
         };
+        // var validFirstName = typeof formData['firstName'] === 'string' && formData['firstName'].trim() !== ''
+        // var validLastName = typeof formData['lastName'] === 'string' && formData['firstName'].trim() !== ''
+        var validEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(formData['email'])
+        if(!validEmail) {alert('invalid email')}
+        // else if(!validFirstName || !validLastName){alert('invalid first/last name')}
 
         $.ajax({
             type    : 'POST',
@@ -21,9 +26,14 @@ $(document).ready(function(){
             encode   : true
         })
         .done(function(data){
-            alert('sucess')
+        
+                $('.alert').show()
+                alert('Proceed to login')
 
+          
+           
         });
+         setTimeout(function(){ window.location.assign('login.html'); }, 3000)
         event.preventDefault();
     })
 })

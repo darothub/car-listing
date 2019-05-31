@@ -33,18 +33,21 @@ $(document).ready(function(){
                         `<p class="card-text year" id=${item.year}>${item.year}</p>` +
                         `<p class="card-text price">N${item.price}</p>` +
                         `<a href="#" class="btn btn-primary btn-custom details" id=${item.id}>Details</a>`+ " " +
-                        `<a href="#" class="btn btn-primary btn-custom edit" id=${item.id}>Edit</a>` + " " +
-                        `<a href="#" class="btn btn-primary btn-custom delete" id=${item.id}>Delete</a>` + " " +
+                        `<a href="#" class="btn btn-primary btn-custom edit" style="display: none;" id=${item.id}>Edit</a>` + " " +
+                        `<a href="#" class="btn btn-primary btn-custom delete" style="display: none;" id=${item.id}>Delete</a>` + " " +
                         '</div>'
+                        return false
                    }
+                   return false
                 })
                 $("#res").append(product);
             })
-            .fail(function(){
-                alert('sorry! car not available at the moment ')
-            })
+            
              
-        });
+        })
+        .fail(function(){
+            alert('sorry! car not available at the moment ')
+        })
         event.preventDefault();
     })
 })
