@@ -40,7 +40,9 @@ $(document).ready(function(){
                 })
                 $("#res").append(product);
             })
-            
+            .fail(function(){
+                alert('sorry! car not available at the moment ')
+            })
              
         });
         event.preventDefault();
