@@ -18,5 +18,8 @@
   "homepage": "https://github.com/darothub/car-listing#readme",
   "dependencies": {
     "json-server": "^0.15.0"
+  },
+  "devDependencies": {
+    "bcryptjs": "^2.4.3"
   }
 }

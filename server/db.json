@@ -7,6 +7,13 @@
       "user_name": "darotudeen",
       "email": "darot@email.com",
       "password": "hash"
+    },
+    {
+      "firstName": "q",
+      "lastName": "w",
+      "email": "rrrrr",
+      "password": "rrrrr",
+      "id": 2
     }
   ],
   "cars": [
