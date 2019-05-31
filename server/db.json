@@ -1,0 +1,77 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Darot",
+      "last_name": "Abdulrasaq",
+      "user_name": "darotudeen",
+      "email": "darot@email.com",
+      "password": "hash"
+    },
+    {
+      "firstName": "q",
+      "lastName": "w",
+      "email": "rrrrr",
+      "password": "rrrrr",
+      "id": 2
+    }
+  ],
+  "cars": [
+    {
+      "maker": "Honda",
+      "model": "Pajero",
+      "year": "2010",
+      "price": "233333333",
+      "image": "",
+      "id": 2
+    },
+    {
+      "maker": "Volvo",
+      "model": "Passat",
+      "year": "1245",
+      "price": "6666666666",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrnjlCogXoAnMpBUCglCNVLdRU8kjBSZr04dUf4hg7VcFzO8rk4A",
+      "id": 3
+    },
+    {
+      "maker": "Hyundai",
+      "model": "Smooth",
+      "year": "1988",
+      "price": "2000000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2l4HDUqF5CTQdqJYtCseJZKCvwaE4VnKMH18GfJMX3PKmxDhEYA",
+      "id": 4
+    },
+    {
+      "maker": "Toyota",
+      "model": "Matrix",
+      "year": "2001",
+      "price": "N2,000,000.00",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdlwPOIf4S9Kca-ldsXiiMmtjnsI75uXZAfd3dBWo51HMY6kGCHw",
+      "id": 5
+    },
+    {
+      "maker": "Toyota",
+      "model": "Corolla",
+      "year": "2122",
+      "price": "2222",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4lQOZ3LW3OG4qRd4Ewg1i5COHkwGqQ0N7qGUWViC8VKeCyiWx",
+      "id": 6
+    },
+    {
+      "maker": "Honda",
+      "model": "Saloon",
+      "year": "2014",
+      "price": "233333333",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZfbKy1GH6vzQVM2LYYOiCuopWSy9SDlvrQsMIb_-eOs4_3g5M",
+      "id": 7
+    },
+    {
+      "maker": "Toyota",
+      "model": "Corolla",
+      "year": "2122",
+      "price": "2222",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJmcNYX9iaIiQ2Ly9UHhSBx1BOLlrpbDw13YwVQ0fXfvxWBUcX",
+      "id": 8
+    }
+  ]
+}
