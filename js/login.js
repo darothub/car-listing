@@ -1,20 +1,19 @@
 $(document).ready(function(){
     $('form').submit(function(event){
         var formData = {
-            'email' : $('input [type=email]').val(),
-            'password' : $('input [type=password]').val(),
+            'email' : $('#exampleInputEmail1').val(),
+            'password' : $('#exampleInputPassword1').val(),
             
         };
-
+        console.log(formData)
         
-        // $.getJSON('http://localhost:3000/cars', function(data){
-        //     console.log(data)
+        // $.getJSON('http://localhost:3000/users', function(data){
+            
         // })
        
         $.ajax({
             type    : 'GET',
             url     : 'http://localhost:3000/users',
-            data    : formData,
             dataType : 'json',
             encode   : true
         })
