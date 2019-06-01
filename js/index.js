@@ -13,6 +13,7 @@ $(document).ready(function(){
         //     console.log(data)
         // })
         var product;
+        var div = '<div class="card-container-custom" id="res"></div>'
         $.ajax({
             type    : 'GET',
             url     : 'http://localhost:3000/cars',
@@ -40,9 +41,9 @@ $(document).ready(function(){
                         
                      
                     })
-                 
-                    $("#res").append(product);
-                    return false
+                    // $('.car-list').append($("#res"))
+                    $('.car-list').html($("#res").append(product)).hide().fadeIn(1500);
+                    
                }
                 
             })
@@ -50,7 +51,7 @@ $(document).ready(function(){
             
         })
         .fail(function(){
-            alert('sorry! car not available at the moment ')
+            alert('sorry! server error ')
         })
         event.preventDefault();
     })
