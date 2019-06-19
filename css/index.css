@@ -68,12 +68,14 @@ label{
 .card-custom{
     display: inline-block;
     margin-top: 9px;
-    margin-left: 15px;
+    margin-left: 1px;
+    
 }
 .card-container-custom{
     border-top: 2px solid #00A085;
     width: 90%;
     margin: -62px auto;
+    
 }
 
 #result{
