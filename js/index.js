@@ -1,5 +1,7 @@
 $(document).ready(function(){
     $('form').submit(function(event){
+        event.preventDefault();
+        
         var formData = {
             'maker' : $('select.maker').children('option:selected').val(),
             'model' : $('select.model').children('option:selected').val(),
@@ -7,13 +9,19 @@ $(document).ready(function(){
             'price' : $('select.price').children('option:selected').val(),
             
         };
+        $('.maker').on('change', function(e){
 
+            e.preventDefault();
+            location.reload(true)
+            
+        });
         
         // $.getJSON('http://localhost:3000/cars', function(data){
         //     console.log(data)
         // })
-        var product;
-        var div = '<div class="card-container-custom" id="res"></div>'
+        
+        
+        var div = $('.car-list').html()
         $.ajax({
             type    : 'GET',
             url     : 'http://localhost:3000/cars',
@@ -21,10 +29,16 @@ $(document).ready(function(){
             encode   : true
         })
         .done(function(data){
+            
             $.each(data, function(index, item){
-                if(item.maker === formData['maker']){
+                var product = ''
+                if(formData['maker'] == 'Choose...'){
+                    alert('oops! choose a valid maker')
+                }
+                else if(item.maker === formData['maker']){
+                    
                     console.log(item)
-                    $.each(item, function(key, value){
+                    // $.each(item, function(key, value){
                         // console.log(item)
                         product = '<div class="card card-custom" style="width: 18rem;">' + 
                         `<img src=${item.image} class="card-img-top" alt="...">`  + 
@@ -40,21 +54,28 @@ $(document).ready(function(){
                         '</div>'
                         
                      
-                    })
+                    // })
                     // $('.car-list').append($("#res"))
+                    
                     $('.car-list').html($("#res").append(product)).hide().fadeIn(1500);
+                    product = '';
                     
                }
+              
+               
                 
             })
-           
+            return false
             
         })
         .fail(function(){
             alert('sorry! server error ')
         })
-        event.preventDefault();
+        
+        $('form')[0].reset(); 
+       
     })
+    
 })
 
 $(document).ready(function(e){
