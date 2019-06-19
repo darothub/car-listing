@@ -40,7 +40,7 @@ $(document).ready(function(){
                     console.log(item)
                     // $.each(item, function(key, value){
                         // console.log(item)
-                        product = '<div class="card card-custom" style="width: 18rem;">' + 
+                        product = '<div class="card card-custom" style="width: 19rem;">' + 
                         `<img src=${item.image} class="card-img-top" alt="...">`  + 
                         `<div class="card-body">`+
                         `<h5 class="card-title" style="display:none;" id=${item.id}>${item.id}</h5>` +
