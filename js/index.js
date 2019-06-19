@@ -36,7 +36,7 @@ $(document).ready(function(){
                         `<a href="#" class="btn btn-primary btn-custom edit" style="display: none;" id=${item.id}>Edit</a>` + " " +
                         `<a href="#" class="btn btn-primary btn-custom delete" style="display: none;" id=${item.id}>Delete</a>` + " " +
                         '</div>'
-                        return false
+                        
                    }
                    return false
                 })
