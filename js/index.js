@@ -34,11 +34,12 @@ $(document).ready(function(){
                 var product = ''
                 if(formData['maker'] == 'Choose...'){
                     alert('oops! choose a valid maker')
+                    return false
                 }
                 else if(item.maker === formData['maker']){
                     
                     console.log(item)
-                    // $.each(item, function(key, value){
+                    $.each(item, function(key, value){
                         // console.log(item)
                         product = '<div class="card card-custom" style="width: 19rem;">' + 
                         `<img src=${item.image} class="card-img-top" alt="...">`  + 
@@ -53,8 +54,8 @@ $(document).ready(function(){
                         `<a href="#" class="btn btn-primary btn-custom delete" style="display: none;" id=${item.id}>Delete</a>` + " " +
                         '</div>'
                         
-                     
-                    // })
+                        return false
+                    })
                     // $('.car-list').append($("#res"))
                     $('.car-list').slideDown('slow')
                     $('.car-list').html($("#res").append(product))
@@ -63,6 +64,7 @@ $(document).ready(function(){
                         e.preventDefault()
                         alert('Kindly login to see details')
                     })
+                    
                }
               
                
