@@ -30,39 +30,12 @@
       "id": 4
     },
     {
-      "firstName": "toli",
-      "lastName": "toli",
-      "email": "toliex@email.com",
-      "password": "toli",
+      "firstName": "tobi",
+      "lastName": "tobi",
+      "email": "tobi@email.com",
+      "password": "tobi",
+      "password2": "tobi",
       "id": 5
-    },
-    {
-      "firstName": "a",
-      "lastName": "a",
-      "email": "a@email.com",
-      "password": "a",
-      "id": 6
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "password": "",
-      "id": 7
-    },
-    {
-      "firstName": "aa",
-      "lastName": "a",
-      "email": "a@email.com",
-      "password": "a",
-      "id": 8
-    },
-    {
-      "firstName": "b",
-      "lastName": "b",
-      "email": "b@email.com",
-      "password": "b",
-      "id": 9
     }
   ],
   "cars": [

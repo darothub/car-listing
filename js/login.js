@@ -5,7 +5,7 @@ $(document).ready(function(){
             'password' : $('#exampleInputPassword1').val(),
             
         };
-        console.log(formData)
+        // console.log(formData)
         
         // $.getJSON('http://localhost:3000/users', function(data){
             
@@ -22,7 +22,7 @@ $(document).ready(function(){
                var i = 0;
                while(i < data.length){
                     if(formData['email'] === data[i]['email'] && formData['password'] === data[i]['password'] ){
-                        $('.form-content').before('<div class="alert alert-primary" role="alert" > You have signed in successfully </div>')
+                        $('form').before('<div class="alert alert-primary" role="alert" > You have signed in successfully </div>')
                         setTimeout(function(){ window.location.assign('products.html'); }, 3000); 
                         
                          return false
@@ -31,7 +31,7 @@ $(document).ready(function(){
                    
                     i++
                }
-               $('.form-content').before('<div class="alert alert-danger" role="alert">Invalid username/password</div>')
+               $('form').before('<div class="alert alert-danger" role="alert">Invalid username/password</div>')
                $('.alert-danger').hide().fadeIn(2000).fadeOut(1000)
            
             
