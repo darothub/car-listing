@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function(){
     console.log('hey')
     $('form').submit(function(event){
@@ -27,14 +24,12 @@ $(document).ready(function(){
             encode   : true
         })
         .done(function(data){
-            if(data){
+            
                 $('form').before('<div class="alert alert-primary" role="alert"> You have successfully signed up </div>')
+                $('.alert-primary').fadeOut(2000)
+               
                 
-                setTimeout(function(){ 
-                    window.location.replace('login.html'); 
-                }, 3000)
-                
-            }
+
             
             
         })

@@ -28,13 +28,16 @@ $(document).ready(function(){
                          return false
                         
                     }
-                   
+                    else{
+                        $('form').before('<div class="alert alert-danger" role="alert">Invalid username/password</div>')
+                        $('.alert-danger').fadeOut(2000)
+                        return false
+                    }
                     i++
                }
-               $('form').before('<div class="alert alert-danger" role="alert">Invalid username/password</div>')
-               $('.alert-danger').hide().fadeIn(2000).fadeOut(1000)
+               
            
-            
+               
              
         })
         .fail(function(){
