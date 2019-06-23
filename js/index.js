@@ -48,7 +48,7 @@ $(document).ready(function(){
                         `<p class="card-text model">${item.model}</p>` +
                         `<p class="card-text year" id=${item.year}>${item.year}</p>` +
                         `<p class="card-text price">N${item.price}</p>` +
-                        `<a href="#" class="btn btn-primary btn-custom details" id=${item.id}>Details</a>`+ " " +
+                        `<a href="#" class="btn btn-primary btn-custom details" id=${item.id} >Details</a>`+ " " +
                         `<a href="#" class="btn btn-primary btn-custom edit" style="display: none;" id=${item.id}>Edit</a>` + " " +
                         `<a href="#" class="btn btn-primary btn-custom delete" style="display: none;" id=${item.id}>Delete</a>` + " " +
                         '</div>'
@@ -56,10 +56,13 @@ $(document).ready(function(){
                      
                     // })
                     // $('.car-list').append($("#res"))
-                    
-                    $('.car-list').html($("#res").append(product)).hide().fadeIn(1500);
+                    $('.car-list').slideDown('slow')
+                    $('.car-list').html($("#res").append(product))
                     product = '';
-                    
+                    $('.details').on('click', function(e){
+                        e.preventDefault()
+                        alert('Kindly login to see details')
+                    })
                }
               
                
@@ -75,6 +78,8 @@ $(document).ready(function(){
         $('form')[0].reset(); 
        
     })
+
+ 
     
 })
 
@@ -122,9 +127,8 @@ $(document).ready(function(e){
         }) 
         
     })
-           
-   })
+
+})
    
-   
-   
+
    
