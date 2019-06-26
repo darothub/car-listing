@@ -13,7 +13,7 @@ $(document).ready(function(){
        
         $.ajax({
             type    : 'GET',
-            url     : 'http://localhost:3000/users',
+            url     : 'https://car-flux.herokuapp.com/users',
             dataType : 'json',
             encode   : true
         })

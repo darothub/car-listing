@@ -1,7 +1,7 @@
 
 $(document).ready(function(e){
    
- $.getJSON('http://localhost:3000/cars', function(data){
+ $.getJSON('https://car-flux.herokuapp.com/cars', function(data){
   
             var product;
             $.each(data, function(index, item){
@@ -26,7 +26,7 @@ $(document).ready(function(e){
             $('.edit').on('click', function(event){
                 var {id} = event.target
                 
-                $.getJSON(`http://localhost:3000/cars/${id}`, function(data){
+                $.getJSON(`https://car-flux.herokuapp.com/cars/${id}`, function(data){
                     
                     // console.log(data.maker)
                     $('input[name=id]').val(data.id);
@@ -53,7 +53,7 @@ $(document).ready(function(e){
                 
                 $.ajax({
                     type    : 'PATCH',
-                    url     : `http://localhost:3000/cars/${formData['id']}`,
+                    url     : `https://car-flux.herokuapp.com/cars/${formData['id']}`,
                     data    : formData,
                     dataType : 'json',
                     encode   : true
@@ -73,7 +73,7 @@ $(document).ready(function(e){
                 
                 $.ajax({
                     type    : 'DELETE',
-                    url     : `http://localhost:3000/cars/${id}`,
+                    url     : `https://car-flux.herokuapp.com/cars/${id}`,
                     data    : formData,
                     dataType : 'json',
                     encode   : true
@@ -96,7 +96,7 @@ $(document).ready(function(e){
                 var productImage;
                 $.ajax({
                     type    : 'GET',
-                    url     : `http://localhost:3000/cars/${id}`,
+                    url     : `https://car-flux.herokuapp.com/cars/${id}`,
                     dataType : 'json',
                     encode   : true
                 })
@@ -149,7 +149,7 @@ $(document).ready(function(){
 
         $.ajax({
             type    : 'POST',
-            url     : `http://localhost:3000/cars/`,
+            url     : `https://car-flux.herokuapp.com/cars/`,
             data    : formData,
             dataType : 'json',
             encode   : true

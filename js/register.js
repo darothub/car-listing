@@ -18,7 +18,7 @@ $(document).ready(function(){
     
         $.ajax({
             type    : 'POST',
-            url     : `http://localhost:3000/users`,
+            url     : `https://car-flux.herokuapp.com/users`,
             data    : formData,
             dataType : 'json',
             encode   : true

@@ -24,7 +24,7 @@ $(document).ready(function(){
         var div = $('.car-list').html()
         $.ajax({
             type    : 'GET',
-            url     : 'http://localhost:3000/cars',
+            url     : 'https://car-flux.herokuapp.com/cars',
             dataType : 'json',
             encode   : true
         })
@@ -87,7 +87,7 @@ $(document).ready(function(){
 
 $(document).ready(function(e){
    console.log('ready')
-    $.getJSON('http://localhost:3000/cars', function(data){
+    $.getJSON('https://car-flux.herokuapp.com/cars', function(data){
      
         var optionMaker ;
         var optionModel;
