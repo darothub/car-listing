@@ -30,39 +30,28 @@
       "id": 4
     },
     {
-      "firstName": "toli",
-      "lastName": "toli",
-      "email": "toliex@email.com",
-      "password": "toli",
+      "firstName": "tobi",
+      "lastName": "tobi",
+      "email": "tobi@email.com",
+      "password": "tobi",
+      "password2": "tobi",
       "id": 5
     },
     {
-      "firstName": "a",
-      "lastName": "a",
-      "email": "a@email.com",
-      "password": "a",
+      "firstName": "Abdulrasaq",
+      "lastName": "Durosomo",
+      "email": "darotudeen@gmail.com",
+      "password": "ff",
+      "password2": "ff",
       "id": 6
     },
     {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "password": "",
+      "firstName": "Abdulrasaq",
+      "lastName": "Durosomo",
+      "email": "darotudeen@gmail.com",
+      "password": "ff",
+      "password2": "ff",
       "id": 7
-    },
-    {
-      "firstName": "aa",
-      "lastName": "a",
-      "email": "a@email.com",
-      "password": "a",
-      "id": 8
-    },
-    {
-      "firstName": "b",
-      "lastName": "b",
-      "email": "b@email.com",
-      "password": "b",
-      "id": 9
     }
   ],
   "cars": [
@@ -70,7 +59,7 @@
       "maker": "Toyota",
       "model": "Matrix",
       "year": "2001",
-      "price": "N2,000,000.00",
+      "price": "2,000,000.00",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdlwPOIf4S9Kca-ldsXiiMmtjnsI75uXZAfd3dBWo51HMY6kGCHw",
       "id": 5
     },

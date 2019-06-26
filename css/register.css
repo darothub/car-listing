@@ -72,6 +72,10 @@ form{
     
 } 
 
+.alert-success{
+    display: none;
+}
+
 .footer-custom{
     text-align: center;
     background-color: #00A085;

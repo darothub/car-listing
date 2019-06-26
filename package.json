@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "12.2.0"
+  },
   "scripts": {
+    "start": "json-server --watch server/db.json -p 3001 -d 2000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +21,7 @@
   },
   "homepage": "https://github.com/darothub/car-listing#readme",
   "dependencies": {
+    "foreman": "^3.0.1",
     "json-server": "^0.15.0"
   },
   "devDependencies": {

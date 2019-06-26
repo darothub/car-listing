@@ -101,3 +101,20 @@ form{
     height: 50px;
     margin: 10px auto;
 }
+.display{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#btn-back{
+    width: 80px;
+    margin: 20px 55px;
+}
+
+#right-display{
+    margin-top: 15px;
+    margin-right: 25px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(1, 1fr);
+}

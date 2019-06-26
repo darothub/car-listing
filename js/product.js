@@ -93,7 +93,7 @@ $(document).ready(function(e){
                 var {id} = event.target
                 // console.log(id)
                 var productById ;
-                
+                var productImage;
                 $.ajax({
                     type    : 'GET',
                     url     : `http://localhost:3000/cars/${id}`,
@@ -116,7 +116,14 @@ $(document).ready(function(e){
                     `<a href="#" class="btn btn-primary btn-custom edit"  style ="display:none" id=${data.id}>Edit</a>` + " " +
                     `<a href="#" class="btn btn-primary btn-custom delete"  style ="display:none" id=${data.id}>Delete</a>` + " " +
                     '</div>'
+                    productImage = `<img src =${data.image} style='width: 280px'>`
+                    $(".display").slideDown('slow');
                     $("#display").append(productById);
+                    $(".car-lists").hide();
+                    $('#right-display').append(productImage)
+                    $('#right-display').append(productImage)
+                    $('#right-display').append(`<p>Location:</p>`)
+                    $('#right-display').append(`<p>Contact:</p>`)
                     
                     
                     // window.location.assign('../display.html')
@@ -159,21 +166,10 @@ $(document).ready(function(){
 console.log('hey')
 
 $(document).ready(function(){
-    $('a').click(function(event){
-        console.log('success') 
-        event.preventDefault()
-    })
-    // $.ajax({
-    //     type    : 'PUT',
-    //     url     : `http://localhost:3000/cars/${id}`,
-    //     data    : formData,
-    //     dataType : 'json',
-    //     encode   : true
-    // })
-    // .done(function(data){
-    //     alert('sucess')
-
-    // });
+  $("#btn-back").on('click', function(e){
+    e.preventDefault()
+    location.reload(true)
+  })
 })
 
 // $(document).ready(function(){
