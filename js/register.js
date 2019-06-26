@@ -28,10 +28,9 @@ $(document).ready(function(){
             $('.alert-success').css({display: "block"}).fadeIn(3000)
             $('.alert-success').show();
             alert('proceed to login')
-            setTimeout(function(){                    
-                    window.location.assign('login.html'); 
-            }, 3000); 
-                
+            window.location.assign('login.html');               
+                    
+                           
        })
         .fail(function(){
             alert('oops! server error')
