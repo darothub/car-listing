@@ -19,13 +19,14 @@ $(document).ready(function(){
         })
         .done(function(data){
             console.log(data)
-               var i = 0;
-               while(i < data.length){
-                    if(formData['email'] === data[i]['email'] && formData['password'] === data[i]['password'] ){
+               
+               for(let i = 0; i<data.length; i++){
+                console.log(data[i]['email'])
+                    if(data[i]['email'] === formData['email'] && data[i]['password'] === formData['password']){
                         $('form').before('<div class="alert alert-primary" role="alert" > You have signed in successfully </div>')
                         setTimeout(function(){ window.location.assign('products.html'); }, 3000); 
                         
-                         return false
+                        
                         
                     }
                     else{
@@ -33,7 +34,7 @@ $(document).ready(function(){
                         $('.alert-danger').fadeOut(2000)
                         return false
                     }
-                    i++
+                    
                }
                
            
