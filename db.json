@@ -36,6 +36,22 @@
       "password": "tobi",
       "password2": "tobi",
       "id": 5
+    },
+    {
+      "firstName": "Abdulrasaq",
+      "lastName": "Durosomo",
+      "email": "darotudeen@gmail.com",
+      "password": "ff",
+      "password2": "ff",
+      "id": 6
+    },
+    {
+      "firstName": "Abdulrasaq",
+      "lastName": "Durosomo",
+      "email": "darotudeen@gmail.com",
+      "password": "ff",
+      "password2": "ff",
+      "id": 7
     }
   ],
   "cars": [

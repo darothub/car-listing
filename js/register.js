@@ -24,15 +24,16 @@ $(document).ready(function(){
             encode   : true
         })
         .done(function(data){
-            
-                $('form').before('<div class="alert alert-primary" role="alert"> You have successfully signed up </div>')
-                $('.alert-primary').fadeOut(2000)
-               
-                
 
-            
-            
-        })
+            $('.alert-success').css({display: "block"}).fadeIn(3000)
+            $('.alert-success').show();
+                // setTimeout(function(){
+                //     $('form').before('')
+                    
+                //      window.location.assign('products.html'); 
+                // }, 3000); 
+                
+       })
         .fail(function(){
             alert('oops! server error')
         })
