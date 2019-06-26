@@ -27,11 +27,10 @@ $(document).ready(function(){
 
             $('.alert-success').css({display: "block"}).fadeIn(3000)
             $('.alert-success').show();
-                // setTimeout(function(){
-                //     $('form').before('')
-                    
-                //      window.location.assign('products.html'); 
-                // }, 3000); 
+            alert('proceed to login')
+            setTimeout(function(){                    
+                    window.location.assign('login.html'); 
+            }, 3000); 
                 
        })
         .fail(function(){
