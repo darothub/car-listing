@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $('form').submit(function(event){
+        event.preventDefault();
         var formData = {
             'email' : $('#exampleInputEmail1').val(),
             'password' : $('#exampleInputPassword1').val(),
@@ -20,30 +21,27 @@ $(document).ready(function(){
         .done(function(data){
             console.log(data)
                
-               for(let i = 0; i<data.length; i++){
-                console.log(data[i]['email'])
-                    if(data[i]['email'] === formData['email'] && data[i]['password'] === formData['password']){
-                        $('form').before('<div class="alert alert-primary" role="alert" > You have signed in successfully </div>')
-                        setTimeout(function(){ window.location.assign('products.html'); }, 3000); 
+               for(let i = 0; i< data.length; i++){
+                
+                    if(formData['email'] !== data[i]['email'] && formData['password'] !== data[i]['password'] ){
+                        $('form').after('<div class="alert alert-danger" role="alert">Invalid username/password</div>')
+                    
                         
                         
                         
                     }
                     else{
-                        $('form').before('<div class="alert alert-danger" role="alert">Invalid username/password</div>')
-                        $('.alert-danger').fadeOut(2000)
-                        return false
+                        $('form').before('<div class="alert alert-success" role="alert" > You have signed in successfully </div>')
+                        window.location.assign('products.html');
+                        
                     }
-                    
-               }
+                    // $('.alert-danger').fadeOut(2000)     
+               }          
                
-           
-               
-             
         })
         .fail(function(){
             alert('oops! server error')
         })
-        event.preventDefault();
+       
     })
 })
