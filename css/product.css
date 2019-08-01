@@ -6,6 +6,7 @@
 
 .header{  
     background-color: #00A085;
+    text-align: center;
 }
 
 .nav-custom{
@@ -46,7 +47,8 @@ form{
 }
 .btn-custom{
     height: 50px;
-    line-height: 2em;
+    margin: 10px 0 0 15px;
+    line-height: 1em;
     background-color: #00A085;
 }
 .form-content{
@@ -70,7 +72,7 @@ form{
     background-color: lightgray;
 }
 .input-container input{
-    width: 350px;
+    
     height: 60px;
    
     
@@ -117,4 +119,8 @@ form{
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(1, 1fr);
+}
+
+.details, .edit, .delete{
+    background-color: #00A085;
 }

@@ -5,36 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Home</title>
 </head>
 <body>
-          <section class="container header">
+      <nav class= 'navbar navbar-expand-md navbar-light bg-light sticky-top'>
+        <section class="container header ">
             <div id="header-custom">
               <img src="images/car-logo.gif" class="align-self-center mr-3 img1" alt="logo">
               <h1 class="display-6">Car-Flux</h1>
             </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse header" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto nav-pills">
+                  <li class="nav-item active">
+                    <a  class="nav-link " href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" style="display: none;" href="products.html">Product</a>
+                  </li>
+    
+                </ul>
+            </div>
           </section>
-          <div class="container nav header">
-            <ul class="nav nav-pills  nav-custom">
-              <li class="nav-item">
-                <a  class="nav-link " href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" style="display: none;" href="products.html">Product</a>
-              </li>
 
-            </ul>
-        </div>
+      </nav>  
         <div class="container jumbotron form-content">
             <div class="form-group form-custom ">
               <form >
@@ -78,41 +87,17 @@
                       
                   </div>
              
-                  <button type="submit" class="btn btn-primary btn-custom" id="search">Search</button>
+                  <button type="submit" class="btn btn-outline-light btn-lg btn-custom" id="search">Search</button>
               </form>
 
             </div>
      
         </div>
-        <section class="jumbotron container car-list" style="display: none;">
-                <div class="card-container-custom" id="res">
-                        
-                            <!-- <div class="card card-custom" style="width: 19rem;">
-                                <img src="images/car4.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                <h5 class="card-title" >Infiniti </h5>
-                                <p class="card-text">QX80</p>
-                                <p class="card-text year">2017</p>
-                                <p class="card-text">N1,000,000.00</p>
-                                <a href="#" class="btn btn-primary btn-custom">Details</a>
-                                <a href="#" class="btn btn-primary btn-custom ">Edit</a>
-                                <a href="#" class="btn btn-primary btn-custom">Delete</a>
-                                </div>
-                            </div>
-                            <div class="card card-custom" style="width: 19rem;">
-                              <img src="images/car4.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                              <h5 class="card-title" >Infiniti </h5>
-                              <p class="card-text">QX80</p>
-                              <p class="card-text year">2017</p>
-                              <p class="card-text">N1,000,000.00</p>
-                              <a href="#" class="btn btn-primary btn-custom">Details</a>
-                              <a href="#" class="btn btn-primary btn-custom ">Edit</a>
-                              <a href="#" class="btn btn-primary btn-custom">Delete</a>
-                              </div>
-                          </div>
-                          <div class="card card-custom" style="width: 19rem;">
-                            <img src="images/car4.jpg" class="card-img-top" alt="...">
+        <section class="jumbotron container padding car-list" >
+                <div class=" row padding " id="res">
+                     <!-- <div class="col-md-4 ">   
+                        <div class="card " >
+                            <img src="images/car4.jpg" class="card-img-top" alt="car-image" class="img-fluid">
                             <div class="card-body">
                             <h5 class="card-title" >Infiniti </h5>
                             <p class="card-text">QX80</p>
@@ -121,8 +106,37 @@
                             <a href="#" class="btn btn-primary btn-custom">Details</a>
                             <a href="#" class="btn btn-primary btn-custom ">Edit</a>
                             <a href="#" class="btn btn-primary btn-custom">Delete</a>
-                            </div> -->
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-md-4 ">   
+                        <div class="card " >
+                            <img src="images/car4.jpg" class="card-img-top" alt="car-image" class="img-fluid">
+                            <div class="card-body">
+                            <h5 class="card-title" >Infiniti </h5>
+                            <p class="card-text">QX80</p>
+                            <p class="card-text year">2017</p>
+                            <p class="card-text">N1,000,000.00</p>
+                            <a href="#" class="btn btn-primary btn-custom">Details</a>
+                            <a href="#" class="btn btn-primary btn-custom ">Edit</a>
+                            <a href="#" class="btn btn-primary btn-custom">Delete</a>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-md-4 ">   
+                        <div class="card " >
+                            <img src="images/car4.jpg" class="card-img-top" alt="car-image" class="img-fluid">
+                            <div class="card-body">
+                            <h5 class="card-title" >Infiniti </h5>
+                            <p class="card-text">QX80</p>
+                            <p class="card-text year">2017</p>
+                            <p class="card-text">N1,000,000.00</p>
+                            <a href="#" class="btn btn-primary btn-custom">Details</a>
+                            <a href="#" class="btn btn-primary btn-custom ">Edit</a>
+                            <a href="#" class="btn btn-primary btn-custom">Delete</a>
+                            </div>
+                        </div>
+                    </div>         -->
                 </div>
             </section>
   <footer class="container footer-custom">Darot Cars &copy;</footer>

@@ -1,4 +1,4 @@
-.header h1{
+header h1{
     margin-top: 15px;
    display: inline-block;
    
@@ -6,8 +6,11 @@
 
 .header{  
     background-color: #00A085;
+    text-align: center;
 }
-
+.nav-right{
+    height: 89px;
+}
 .nav-custom{
     margin: 0 auto;
     width: auto;
