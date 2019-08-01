@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/register.css">
@@ -26,7 +27,7 @@
                     <div class="collapse navbar-collapse " id="navbarResponsive">
                         <ul class="navbar-nav ml-auto nav-fill">
                           <li class="nav-item active">
-                            <a  class="nav-link " href="#">Home</a>
+                            <a  class="nav-link " href="index.html">Home</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="#">Contact us</a>
@@ -44,17 +45,17 @@
         
               </nav>  
             <div class="container jumbotron form-content " id="form-content">
-                <div class="col-md-6 form-group form-row  input-container">
-                    <div class="alert alert-success"  role="alert"> You have successfully signed up </div>
+                <div class="col-md-4 form-group form-row  input-container">
+                <div class=" container text-center alert alert-success"  role="alert" style="display: none "> You have successfully signed up </div>
                   <form >
                         <div class="col-auto">
                                 <label for="first_name">First name</label>
-                                <input type="text" class="form-control" id="first_name" aria-describedby="emailHelp" placeholder="First Name" required />
+                                <input type="text" class="form-control" name="first" id="first_name" aria-describedby="emailHelp" placeholder="First Name" required />
                                 
                         </div>
                         <div class="col-auto">
                             <label for="last_name">Last name</label>
-                            <input type="text" class="form-control" id="last_name" aria-describedby="emailHelp" placeholder="Last Name" required />
+                            <input type="text" class="form-control" name="last" id="last_name" aria-describedby="emailHelp" placeholder="Last Name" required />
                             
                         </div>
                         <div class="col-auto">
@@ -64,12 +65,12 @@
                         </div>
                         <div class="col-auto">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required />
+                            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required />
                             
                         </div>
                         <div class="col-auto">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required />
+                            <input type="password" class="form-control" name="password1" id="exampleInputPassword1" placeholder="Password" required />
                         </div>
                         <div class="col-auto">
                                 <label for="exampleInputPassword1">Confirm Password</label>
