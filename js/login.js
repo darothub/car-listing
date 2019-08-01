@@ -24,18 +24,23 @@ $(document).ready(function(){
                for(let i = 0; i< data.length; i++){
                 
                     if(formData['email'] !== data[i]['email'] && formData['password'] !== data[i]['password'] ){
-                        $('form').after('<div class="alert alert-danger" role="alert">Invalid username/password</div>')
+                        $('.alert-danger').show()
+                        $('.alert-danger').fadeOut(2000)
                     
-                        
+                        return false
                         
                         
                     }
                     else{
-                        $('form').before('<div class="alert alert-success" role="alert" > You have signed in successfully </div>')
-                        window.location.assign('products.html');
+                        $('.alert-success').show()
+                        $('.alert-success').fadeOut(2000)
+                        window.location.assign('products.html').delay(2000)
                         
+                        return false
                     }
-                    // $('.alert-danger').fadeOut(2000)     
+                    // $('.alert-danger').fadeOut(2000) 
+                      
+                    return false  
                }          
                
         })

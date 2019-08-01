@@ -58,7 +58,7 @@ $(document).ready(function(){
                         
                         return false
                     })
-                    // $('.car-list').append($("#res"))
+                    $('.car-list').show()
                     $('.car-list').slideDown('slow')
                     $('.car-list').html($("#res").append(product))
                     product = '';

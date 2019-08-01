@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,17 +14,18 @@
     <title>Home</title>
 </head>
 <body>
-      <nav class= 'navbar navbar-expand-md navbar-light bg-light sticky-top'>
-        <section class="container header ">
-            <div id="header-custom">
-              <img src="images/car-logo.gif" class="align-self-center mr-3 img1" alt="logo">
-              <h1 class="display-6">Car-Flux</h1>
-            </div>
+     
+      <nav class="container navbar navbar-expand-md sticky-top navbar-light bg-light header">
+        <section class="container ">
+            
+              <a class="navbar-brand" href="#"><img src="images/car-logo.gif" alt="logo"></a>
+              
+            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse header" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto nav-pills">
+            <div class="collapse navbar-collapse " id="navbarResponsive">
+                <ul class="navbar-nav ml-auto nav-fill">
                   <li class="nav-item active">
                     <a  class="nav-link " href="#">Home</a>
                   </li>
@@ -44,7 +44,7 @@
           </section>
 
       </nav>  
-        <div class="container jumbotron form-content">
+        <div class="container form-content">
             <div class="form-group form-custom ">
               <form >
                   <div class="form-group  ">
@@ -93,7 +93,7 @@
             </div>
      
         </div>
-        <section class="jumbotron container padding car-list" >
+        <section class=" container jumbotron car-list" style="display: none;">
                 <div class=" row padding " id="res">
                      <!-- <div class="col-md-4 ">   
                         <div class="card " >
@@ -139,7 +139,7 @@
                     </div>         -->
                 </div>
             </section>
-  <footer class="container footer-custom">Darot Cars &copy;</footer>
+  <footer class=" navbar-light container footer-custom">Darot Cars &copy;</footer>
   <script src="js/index.js"></script>
 </body>
 </html>
