@@ -107,26 +107,28 @@ $(document).ready(function(e){
                     
                     // $('display.html').load('.display')
                     // console.log(data)
-                    productById = '<div class="card card-custom" id="card" style="width: 18rem;">' + 
-                    `<img src=${data.image} class="card-img-top" alt="...">`  + 
-                    `<div class="card-body">`+
-                    `<h5 class="card-title" style="display:none;" id=${data.id}>${data.id}</h5>` +
-                    `<h5 class="card-title" id=${data.maker}>${data.maker}</h5>`+
-                    `<p class="card-text model">${data.model}</p>` +
-                    `<p class="card-text year" id=${data.year}>${data.year}</p>` +
-                    `<p class="card-text price">N${data.price}</p>` +
-                    `<a href="#" class="btn btn-primary btn-custom details"  style ="display:none" id=${data.id}>Details</a>`+ " " +
-                    `<a href="#" class="btn btn-primary btn-custom edit"  style ="display:none" id=${data.id}>Edit</a>` + " " +
-                    `<a href="#" class="btn btn-primary btn-custom delete"  style ="display:none" id=${data.id}>Delete</a>` + " " +
-                    '</div>'
-                    productImage = `<img src =${data.image} style='width: 280px'>`
+                    productById = 
+                         '<div class="card">' + 
+                            `<img src=${data.image} class="card-img-top" alt="...">`  + 
+                            `<div class="card-body">`+
+                            `<h5 class="card-title" style="display:none;" id=${data.id}>${data.id}</h5>` +
+                            `<h5 class="card-title" id=${data.maker}>${data.maker}</h5>`+
+                            `<p class="card-text model">${data.model}</p>` +
+                            `<p class="card-text year" id=${data.year}>${data.year}</p>` +
+                            `<p class="card-text price">N${data.price}</p>` +
+                            `<a href="#" class="btn btn-primary btn-custom details"  style ="display:none" id=${data.id}>Details</a>`+ " " +
+                            `<a href="#" class="btn btn-primary btn-custom edit"  style ="display:none" id=${data.id}>Edit</a>` + " " +
+                            `<a href="#" class="btn btn-primary btn-custom delete"  style ="display:none" id=${data.id}>Delete</a>` + " " +
+                        '</div>'
+                    
+                    productImage = `<div class= "card"><img src =${data.image} class="card-img-top" style='width: auto'><div class="card-body"></div></div>`
                     $(".display").slideDown('slow');
                     $("#display").append(productById);
                     $(".car-lists").hide();
                     $('#right-display').append(productImage)
                     $('#right-display').append(productImage)
-                    $('#right-display').append(`<p>Location:</p>`)
-                    $('#right-display').append(`<p>Contact:</p>`)
+                    $('#display').append(`<div><p class="lead">Location:</p> <p class="lead">Contact:</p></div>`)
+                    // $('#right-display').append(`<p>Contact:</p>`)
                     
                     
                     // window.location.assign('../display.html')
