@@ -6,6 +6,7 @@
 
 .header{  
     background-color: #00A085;
+    text-align: center;
 }
 
 .nav-custom{
@@ -64,9 +65,11 @@ form{
     padding: 20px;
     border: 2px solid #00A085;
     border-radius: 5px;
+    width: 400px;
+    background-color: lightgray;
 }
 .input-container input{
-    width: 250px;
+    
     height: 50px;
    
     

@@ -7,18 +7,21 @@ $(document).ready(function(e){
             $.each(data, function(index, item){
         
                 $.each(item, function(key, value){
-                    product = '<div class="card card-custom" style="width: 18rem;">' + 
-                    `<img src=${item.image} class="card-img-top" alt="...">`  + 
-                    `<div class="card-body">`+
-                    `<h5 class="card-title" style="display:none;" id=${item.id}>${item.id}</h5>` +
-                    `<h5 class="card-title" id=${item.maker}>${item.maker}</h5>`+
-                    `<p class="card-text model">${item.model}</p>` +
-                    `<p class="card-text year" id=${item.year}>${item.year}</p>` +
-                    `<p class="card-text price">N${item.price}</p>` +
-                    `<a href="#" class="btn btn-primary btn-custom details" id=${item.id}>Details</a>`+ " " +
-                    `<a href="#" class="btn btn-primary btn-custom edit" id=${item.id}>Edit</a>` + " " +
-                    `<a href="#" class="btn btn-primary btn-custom delete" id=${item.id}>Delete</a>` + " " +
-                    '</div>'
+                    product = 
+                    '<div class="col-md-4 ">' +
+                        '<div class="card">' + 
+                        `<img src=${item.image} class="card-img-top" alt="...">`  + 
+                        `<div class="card-body">`+
+                        `<h5 class="card-title" style="display:none;" id=${item.id}>${item.id}</h5>` +
+                        `<h5 class="card-title" id=${item.maker}>${item.maker}</h5>`+
+                        `<p class="card-text model">${item.model}</p>` +
+                        `<p class="card-text year" id=${item.year}>${item.year}</p>` +
+                        `<p class="card-text price">N${item.price}</p>` +
+                        `<a href="#" class="btn btn-primary  details" id=${item.id} >Details</a>`+ " " +
+                        `<a href="#" class="btn btn-primary  edit"  id=${item.id}>Edit</a>` + " " +
+                        `<a href="#" class="btn btn-primary  delete"  id=${item.id}>Delete</a>` + 
+                        '</div>' +
+                     '</div'
                     
                 })
                 $("#res").append(product);

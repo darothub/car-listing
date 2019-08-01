@@ -41,18 +41,20 @@ $(document).ready(function(){
                     console.log(item)
                     $.each(item, function(key, value){
                         // console.log(item)
-                        product = '<div class="card card-custom" style="width: 19rem;">' + 
-                        `<img src=${item.image} class="card-img-top" alt="...">`  + 
-                        `<div class="card-body">`+
-                        `<h5 class="card-title" style="display:none;" id=${item.id}>${item.id}</h5>` +
-                        `<h5 class="card-title" id=${item.maker}>${item.maker}</h5>`+
-                        `<p class="card-text model">${item.model}</p>` +
-                        `<p class="card-text year" id=${item.year}>${item.year}</p>` +
-                        `<p class="card-text price">N${item.price}</p>` +
-                        `<a href="#" class="btn btn-primary btn-custom details" id=${item.id} >Details</a>`+ " " +
-                        `<a href="#" class="btn btn-primary btn-custom edit" style="display: none;" id=${item.id}>Edit</a>` + " " +
-                        `<a href="#" class="btn btn-primary btn-custom delete" style="display: none;" id=${item.id}>Delete</a>` + " " +
-                        '</div>'
+                        product = '<div class="col-md-4 ">' +
+                                    '<div class="card">' + 
+                                    `<img src=${item.image} class="card-img-top" alt="...">`  + 
+                                    `<div class="card-body">`+
+                                    `<h5 class="card-title" style="display:none;" id=${item.id}>${item.id}</h5>` +
+                                    `<h5 class="card-title" id=${item.maker}>${item.maker}</h5>`+
+                                    `<p class="card-text model">${item.model}</p>` +
+                                    `<p class="card-text year" id=${item.year}>${item.year}</p>` +
+                                    `<p class="card-text price">N${item.price}</p>` +
+                                    `<a href="#" class="btn btn-primary btn-custom details" id=${item.id} >Details</a>`+ " " +
+                                    `<a href="#" class="btn btn-primary btn-custom edit" style="display: none;" id=${item.id}>Edit</a>` + " " +
+                                    `<a href="#" class="btn btn-primary btn-custom delete" style="display: none;" id=${item.id}>Delete</a>` + 
+                                    '</div>' +
+                                  '</div'
                         
                         return false
                     })
