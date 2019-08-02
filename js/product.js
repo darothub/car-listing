@@ -69,25 +69,32 @@ $(document).ready(function(e){
                 event.preventDefault();
             })
             $('.delete').on('click', function(event){
-                var {id} = event.target
-                var formData = {
-                    'id'    :$('input[name=id]').val()
-                };
-                
-                $.ajax({
-                    type    : 'DELETE',
-                    url     : `https://car-flux.herokuapp.com/cars/${id}`,
-                    data    : formData,
-                    dataType : 'json',
-                    encode   : true
-                })
-                .done(function(data){
-                    // prompt('are you sure you want to delete?')
-                    alert('sucess')
+                var response = confirm("Are you sure you want to delete?")
+                if(response){
+                    var {id} = event.target
+                    var formData = {
+                        'id'    :$('input[name=id]').val()
+                    };
+                    
+                    $.ajax({
+                        type    : 'DELETE',
+                        url     : ` https://car-flux.herokuapp.com/cars/${id}`,
+                        data    : formData,
+                        dataType : 'json',
+                        encode   : true
+                    })
+                    .done(function(data){
+                        // prompt('are you sure you want to delete?')
+                        alert('sucess')
+            
+                    }).fail(function(data){
+                        alert('error! can not perform action')
+                    })
+                }
+                else{
+                    alert("Not deleting")
+                }
         
-                }).fail(function(data){
-                    alert('error! can not perform action')
-                })
                 event.preventDefault();
             })
             $('.details').on('click', function(event){
@@ -154,7 +161,7 @@ $(document).ready(function(){
 
         $.ajax({
             type    : 'POST',
-            url     : `https://car-flux.herokuapp.com/cars/`,
+            url     : `http://https://car-flux.herokuapp.com/cars/`,
             data    : formData,
             dataType : 'json',
             encode   : true
