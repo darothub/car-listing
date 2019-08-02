@@ -121,7 +121,7 @@ $(document).ready(function(e){
                             `<a href="#" class="btn btn-primary btn-custom delete"  style ="display:none" id=${data.id}>Delete</a>` + " " +
                         '</div>'
                     
-                    productImage = `<div class= "card"><img src =${data.image} class="card-img-top" style='width: auto'><div class="card-body"></div></div>`
+                    productImage = `<div class= "card"><img src =${data.image} class="card-img-top" '><div class="card-body"></div></div>`
                     $(".display").slideDown('slow');
                     $("#display").append(productById);
                     $(".car-lists").hide();
