@@ -15,10 +15,10 @@ $(document).ready(function(){
             alert('password does not match')
             return false
         }
-        console.log(formData)
+       
         $.ajax({
             type    : 'POST',
-            url     : `https://car-flux.herokuapp.com/users`,
+            url     : ` https://car-flux.herokuapp.com/users`,
             data    : formData,
             dataType : 'json',
             encode   : true

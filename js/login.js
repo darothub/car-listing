@@ -19,29 +19,22 @@ $(document).ready(function(){
             encode   : true
         })
         .done(function(data){
-            console.log(data)
-               
-               for(let i = 0; i< data.length; i++){
-                
-                    if(formData['email'] !== data[i]['email'] && formData['password'] !== data[i]['password'] ){
-                        $('.alert-danger').show()
-                        $('.alert-danger').fadeOut(2000)
+            // console.log(data)
+            const finder = data.find(item => item.email === formData['email'])
+            // console.log(finder)
+            if(finder.password !== formData['password'] ){
+                $('.alert-danger').show()
+                $('.alert-danger').fadeOut(2000)
+                return false
+            }
+            else{
+                    $('.alert-success').show()
+                    $('.alert-success').fadeOut(2000)
+                    window.location.assign('products.html').delay(2000)
                     
-                        return false
-                        
-                        
-                    }
-                    else{
-                        $('.alert-success').show()
-                        $('.alert-success').fadeOut(2000)
-                        window.location.assign('products.html').delay(2000)
-                        
-                        return false
-                    }
-                    // $('.alert-danger').fadeOut(2000) 
-                      
-                    return false  
-               }          
+                    return false
+                }
+            
                
         })
         .fail(function(){

@@ -21,21 +21,6 @@
       "email": "sola@email.com",
       "password": "sola",
       "id": 3
-    },
-    {
-      "firstName": "tola",
-      "lastName": "tola",
-      "email": "tola@email.com",
-      "password": "tola",
-      "id": 4
-    },
-    {
-      "firstName": "tobi",
-      "lastName": "tobi",
-      "email": "tobi@email.com",
-      "password": "tobi",
-      "password2": "tobi",
-      "id": 5
     }
   ],
   "cars": [
