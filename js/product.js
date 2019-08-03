@@ -61,7 +61,7 @@ $(document).ready(function(e){
                        encode   : true
                    })
                    .done(function(data){
-                       alert('sucess')
+                       alert('success')
                        
            
                    });
@@ -71,6 +71,7 @@ $(document).ready(function(e){
                    var response = confirm("Are you sure you want to delete?")
                    if(response){
                        var {id} = event.target
+                       var {maker} = event.target
                        var formData = {
                            'id'    :$('input[name=id]').val()
                        };
@@ -83,8 +84,10 @@ $(document).ready(function(e){
                            encode   : true
                        })
                        .done(function(data){
-                           // prompt('are you sure you want to delete?')
-                           alert('sucess')
+                           
+                           alert(`item is deleted`)
+                           location.reload(true)
+                     
                
                        }).fail(function(data){
                            alert('error! can not perform action')
@@ -168,6 +171,7 @@ $(document).ready(function(e){
            .done(function(data){
                
                alert('sucess')
+               location.reload(true)
    
            });
            event.preventDefault();
