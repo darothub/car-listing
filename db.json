@@ -21,6 +21,14 @@
       "email": "sola@email.com",
       "password": "sola",
       "id": 3
+    },
+    {
+      "firstName": "kola",
+      "lastName": "kola",
+      "email": "kola@email.com",
+      "password": "kola",
+      "password2": "kola",
+      "id": 4
     }
   ],
   "cars": [
