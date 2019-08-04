@@ -149,66 +149,100 @@ $(document).ready(function(e){
            })
            
    })
+
    
-   
+
    $(document).ready(function(){
-       $('form').submit(function(event){
-           var formData = {
-               'maker' : $('input[name=maker]').val(),
-               'model' : $('input[name=model]').val(),
-               'year' : $('input[name=year]').val(),
-               'price' : $('input[name=price]').val(),
-               'image' : $('input[name=image]').val(),
-           };
-   
-           $.ajax({
-               type    : 'POST',
-               url     : `https://car-flux.herokuapp.com/cars`,
-               data    : formData,
-               dataType : 'json',
-               encode   : true
-           })
-           .done(function(data){
-               
-               alert('sucess')
-               location.reload(true)
-   
-           });
-           event.preventDefault();
-       })
+
+    var CLOUDINARY_URL =  'https://api.cloudinary.com/v1_1/carflux/image/upload';
+    var CLOUDINARY_UPLOAD_PRESET = 'of6bplnq'
+     $("#upload").on('click', function(e){
+        var image = $('#inputGroupFile04')
+        var file = image[0].files[0] 
+        var formData = {
+            'maker' : $('input[name=maker]').val(),
+            'model' : $('input[name=model]').val(),
+            'year' : $('input[name=year]').val(),
+            'price' : $('input[name=price]').val(),
+            
+        };       
+        console.log(file)
+        var formDatas = new FormData()
+        formDatas.append('file', file)
+        formDatas.append('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+        $('#uploading-msg').show().fadeOut(3000)
+
+        $.ajax({
+            type    : 'POST',
+            url     : CLOUDINARY_URL,
+            data    : formDatas,
+            dataType : 'json',
+            header:{
+                'Content_Type':'application/x-www-form-urlencoded'
+            },
+            processData: false,
+            cache: false,
+            contentType: false,
+            encode   : true
+        })
+       
+        .done(function(data){
+            
+            $('.img-thumbnail').attr('src', data.secure_url)
+            $('.img-thumbnail').show()
+            $('#imageUrl').val(data.secure_url)
+            formData['image'] = $('#imageUrl').val()
+            
+            console.log(data.secure_url)
+
+            $('#myForm').on('submit', function(event){
+                $.ajax({
+                        type    : 'POST',
+                        url     : `https://car-flux.herokuapp.com/cars`,
+                        data    : formData,
+                        dataType : 'json',
+                        encode   : true
+                    })
+                    .done(function(data){
+                        console.log(data)
+                        alert('sucess')
+                        
+            
+                    })
+                    .fail(function(err){
+                        console.log(err)
+                    })
+                event.preventDefault()   
+
+            })
+
+        })
+  
+        .fail(function(data){
+            console.log(data)
+        })
+        
+       e.preventDefault()
+
+      
+     })
+     
    })
+   
+
    
    console.log('hey')
-   
+
    $(document).ready(function(){
-     $("#btn-back").on('click', function(e){
-       e.preventDefault()
-       location.reload(true)
-     })
-   })
+    $("#btn-back").on('click', function(e){
+      e.preventDefault()
+      window.location.assign('products.html')
+    })
+  })
+
+ 
    
-   // $(document).ready(function(){
-   //     // var formData = {
-   //     //     'id' : $('.id').html(),
-   //     //     'maker' : $('.card-title').each(function(i){$(this).html()}),
-   //     //     'model' : $('.model').html(),
-   //     //     'year' : $('.year').html(),
-   //     //     'price' : $('.price').html(),
-   //     // };
-      
-   //         $('.edit').on('click', function(){
-   //             $('input[name=id]').val($('#card-body').find('#id').text())
-   //             $('input[name=maker]').val($('.maker').html());
-   //             $('input[name=model]').val($('.model').html());
-   //             $('input[name=year]').val($('.year').html());
-   //             $('input[name=price]').val($('price').html());
-   //             $('#btn').html('Update Car')
-   //             $('input[name=image]').val()
-           
-           
-   
-   //         })
-      
-   
-   // })
+ 
+
+
    

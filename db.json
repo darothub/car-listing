@@ -79,6 +79,14 @@
       "price": "20000000",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuZHIASPuh2Q7ETJynBEWvGe00YaipO7Fy6327PpoQFGH6w3p9",
       "id": 12
+    },
+    {
+      "maker": "Toyota",
+      "model": "Corolla",
+      "year": "1999",
+      "price": "20000",
+      "image": "https://res.cloudinary.com/carflux/image/upload/v1564945253/sckkly8tflggxmek5te1.jpg",
+      "id": 13
     }
   ]
 }

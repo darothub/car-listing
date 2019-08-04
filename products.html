@@ -59,34 +59,49 @@
                   <form id="myForm" enctype="multipart/form-data">
                         <div class="col-auto " style="display:none;">
                             <label for="exampleInputEmail1">id</label>
-                            <input type="text" class="form-control"  name ='id' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Maker">
+                            <input type="text" class="form-control"  name ='id' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Maker" >
                             
                         </div>
                         <div class="col-auto ">
                             <label for="exampleInputEmail1">Maker</label>
-                            <input type="text" class="form-control"  name ='maker' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Maker">
+                            <input type="text" class="form-control"  name ='maker' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Maker" required/>
                             
                         </div>
                         <div class="col-auto">
                             <label for="exampleInputEmail1">Model</label>
-                            <input type="text" class="form-control" name ='model' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Model">
+                            <input type="text" class="form-control" name ='model' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Model"  required/>
                             
                         </div>
                         <div class="col-auto">
                             <label for="exampleInputEmail1">Year</label>
-                            <input type="text" class="form-control" name ='year' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Year">
+                            <input type="text" class="form-control" name ='year' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Year" required/>
                             
                         </div>
                         <div class="col-auto">
                             <label for="exampleInputEmail1">Price</label>
-                            <input type="text" class="form-control" name ='price' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Price">
+                            <input type="text" class="form-control" name ='price' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Price" required/>
                             
                         </div>
-                        <div class="col-auto">
-                                <label for="exampleInputEmail1">Image</label>
-                                <input type="file" class="form-control" name ='image' id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Price">
-                                
+
+                        <div class="input-group col-auto">
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input"  name ='image' id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" required/>
+                              <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
                             </div>
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary " id='upload' type="button" >Upload</button> 
+                              
+                            </div>
+                            
+                        </div>
+                        <p class="lead text-center"  id="uploading-msg" style="display: none;">Please wait...uploading image</p>
+                        <input type="text" style="display: none;" class="form-control" name ='imageUrl' id="imageUrl" aria-describedby="emailHelp" placeholder="Enter url">
+                        <img src="" alt="" style="display: none;" class="img-thumbnail">
+                        <!-- <div class="col-auto">
+                            <label for="exampleInputEmail1">Image</label>
+                            <input type="file" class="form-control" name ='image' id="inputGroupFile04" aria-describedby="emailHelp" placeholder="Enter Price">
+                            <button type="button" class="btn btn-primary btn-sm btn-custom " id='upload'> Upload </button>
+                        </div> -->
                             <button style="display: none;" type="submit" class="btn btn-primary btn-custom " id='btn1'> Update Car </button>
                             <button type="submit" class="btn btn-primary btn-lg btn-custom " id='btn'> Create Car </button> 
                   </form>
@@ -100,6 +115,7 @@
             </section>
             
       <footer class="container footer-custom">Darot Cars &copy;</footer>
+      <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
       <script src="js/product.js"></script>
       <script type="text/javascript">
         $('a.native-anchor').bind('click', function(ev) {
