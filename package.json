@@ -7,7 +7,7 @@
     "node": "12.2.0"
   },
   "scripts": {
-    "start": "json-server --watch server/db.json -p 3001 -d 2000",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
